@@ -1,4 +1,4 @@
-package kata5p1;
+package DataBase;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -7,7 +7,7 @@ import java.sql.Statement;
 
 public class Consulta {
     
-    static void seeAll(Connection conn) {
+    public static void seeAll(Connection conn) {
         String sql = "SELECT * FROM PEOPLE";
         try {
         Statement stmt = conn.createStatement();

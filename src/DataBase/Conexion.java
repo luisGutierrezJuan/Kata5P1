@@ -1,4 +1,4 @@
-package kata5p1;
+package DataBase;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class Conexion {
     
-    static Connection connect(String db) {
+    public static Connection connect(String db) {
         String url = "jdbc:sqlite:" + db;
         Connection conn = null;
         try {
@@ -17,7 +17,7 @@ public class Conexion {
         return conn;
     }
    
-    static void disconnect(Connection conn){
+    public static void disconnect(Connection conn){
         try {
             if (conn != null) {
                 conn.close();
